@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Log", "Log", "{A8D1F02B-6720-4C23-B475-3B25F544F6ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.NLog", "Skeleton.NLog\Skeleton.NLog.csproj", "{3C69E3DC-B07E-4F4C-99BA-3197CC245633}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{396C68C4-68AB-4AC3-9724-0971CD67C746}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{396C68C4-68AB-4AC3-9724-0971CD67C746}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{396C68C4-68AB-4AC3-9724-0971CD67C746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C69E3DC-B07E-4F4C-99BA-3197CC245633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C69E3DC-B07E-4F4C-99BA-3197CC245633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C69E3DC-B07E-4F4C-99BA-3197CC245633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C69E3DC-B07E-4F4C-99BA-3197CC245633}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A8D1F02B-6720-4C23-B475-3B25F544F6ED} = {9BE7F3D4-CE51-419A-85C5-F4F062B0F160}
+		{3C69E3DC-B07E-4F4C-99BA-3197CC245633} = {A8D1F02B-6720-4C23-B475-3B25F544F6ED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BFF0EF0E-5955-4A13-AA7C-BF40818E1B92}
