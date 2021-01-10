@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace Domain.Infrastructure.DependencyInjection
 {
@@ -9,11 +6,11 @@ namespace Domain.Infrastructure.DependencyInjection
     {
         /// <summary />
         IDependencyContainer LoadModule<TModule>() 
-            where TModule : class, IModule, new();
+            where TModule : class, IInfrastructureModule, new();
 
         /// <summary />
         IDependencyContainer UnloadModule<TModule>() 
-            where TModule : class, IModule, new();
+            where TModule : class, IInfrastructureModule, new();
 
         /// <summary />
         IDependencyResolver DependencyResolver { get; }

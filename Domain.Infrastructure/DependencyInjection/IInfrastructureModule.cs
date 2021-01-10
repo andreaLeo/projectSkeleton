@@ -2,7 +2,7 @@
 
 namespace Domain.Infrastructure.DependencyInjection
 {
-    public interface IModule
+    public interface IInfrastructureModule
     {
         IServiceCollection Bind(IServiceCollection serviceCollection);
     }

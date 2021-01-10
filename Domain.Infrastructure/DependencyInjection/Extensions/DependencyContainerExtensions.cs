@@ -23,6 +23,21 @@ namespace Domain.Infrastructure.DependencyInjection.Extensions
             return services;
         }
 
+        public static IServiceCollection Add(this IServiceCollection services,
+          Type[] serviceTypes,
+         object implementationInstance,
+          string name = null,
+          bool overrideIfExist = false)
+        {
+            services.Add(
+                new MultipleBindingServiceDescriptor(
+                    serviceTypes,
+                    implementationInstance,
+                    name,
+                    overrideIfExist));
+            return services;
+        }
+
         /// <summary />
         public static IServiceCollection Add<TService, TImplementation>(this IServiceCollection services,
             ServiceLifetime lifetime = ServiceLifetime.Transient,
