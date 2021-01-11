@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace Domain.Infrastructure.Reflection
 {
-    public interface IObjectAccessReflectionService : ISkeletonService
+    public interface IObjectReflectionAccessService : ISkeletonService
     {
         bool GetTypeByName(string typeName, out Type type);
 
@@ -21,13 +21,6 @@ namespace Domain.Infrastructure.Reflection
         /// </summary>
         
         IReadOnlyDictionary<string, Action<object, object>> GetWriteAccess(Type type);
-
-        /// <summary>
-        /// Gets properties of the given <paramref name="type"/>.
-        /// </summary>
-        /// <returns>True if properties has been found, false otherwise.</returns>
-        
-        bool GetProperties(Type type, out IReadOnlyDictionary<string, PropertyInfo> properties);
 
         /// <summary>
         /// Creates a new instance of the given <paramref name="type"/>.

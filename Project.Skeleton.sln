@@ -13,21 +13,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.NLog", "Skeleton.N
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInjection", "DependencyInjection", "{D277700B-CDAE-4397-97F3-9199A45356E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Ninject", "Skeleton.Ninject\Skeleton.Ninject.csproj", "{616CCCA4-8A09-442C-8BF0-4DB3CD0A9DB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Ninject", "Skeleton.Ninject\Skeleton.Ninject.csproj", "{616CCCA4-8A09-442C-8BF0-4DB3CD0A9DB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{143D51F1-81FA-44FA-B5E0-3C830A5291CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Serialization.NewtonSoft", "Skeleton.JsonSerializer\Skeleton.Serialization.NewtonSoft.csproj", "{7CBB3D89-9887-45F7-BACF-861288CAB371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Serialization.NewtonSoft", "Skeleton.JsonSerializer\Skeleton.Serialization.NewtonSoft.csproj", "{7CBB3D89-9887-45F7-BACF-861288CAB371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Serialization.XmlSerializer", "Skeleton.Serialization.XmlSerializer\Skeleton.Serialization.XmlSerializer.csproj", "{51A6D8A7-F166-4F26-8F1E-34D527D03289}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Serialization.XmlSerializer", "Skeleton.Serialization.XmlSerializer\Skeleton.Serialization.XmlSerializer.csproj", "{51A6D8A7-F166-4F26-8F1E-34D527D03289}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Serialization.Binary", "Skeleton.Serialization.Binary\Skeleton.Serialization.Binary.csproj", "{21681F11-11CC-45A8-B052-86973040D564}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Serialization.Binary", "Skeleton.Serialization.Binary\Skeleton.Serialization.Binary.csproj", "{21681F11-11CC-45A8-B052-86973040D564}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{60877AB9-9FC3-4BBF-BC45-AC15F9E99540}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.WPF.Prism", "Skeleton.WPF.Prism\Skeleton.WPF.Prism.csproj", "{EF4CE183-387D-44C1-A61A-0466599FC4DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.WPF.Prism", "Skeleton.WPF.Prism\Skeleton.WPF.Prism.csproj", "{EF4CE183-387D-44C1-A61A-0466599FC4DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.Services", "Skeleton.Services\Skeleton.Services.csproj", "{59C958C8-8B71-43B6-8E85-12B5DCC62B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skeleton.Services", "Skeleton.Services\Skeleton.Services.csproj", "{59C958C8-8B71-43B6-8E85-12B5DCC62B7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Storage", "Storage", "{E431EF8E-2A2E-4FA7-9331-A4C96D2EFD31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{3CE97673-FD14-4814-8FF9-B553A1564173}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skeleton.SQL.Dapper", "Skeleton.SQL.Dapper\Skeleton.SQL.Dapper.csproj", "{C5A81971-58DF-4151-8944-13996E239200}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +73,10 @@ Global
 		{59C958C8-8B71-43B6-8E85-12B5DCC62B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59C958C8-8B71-43B6-8E85-12B5DCC62B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59C958C8-8B71-43B6-8E85-12B5DCC62B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A81971-58DF-4151-8944-13996E239200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A81971-58DF-4151-8944-13996E239200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A81971-58DF-4151-8944-13996E239200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A81971-58DF-4151-8944-13996E239200}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +92,9 @@ Global
 		{21681F11-11CC-45A8-B052-86973040D564} = {143D51F1-81FA-44FA-B5E0-3C830A5291CE}
 		{60877AB9-9FC3-4BBF-BC45-AC15F9E99540} = {9BE7F3D4-CE51-419A-85C5-F4F062B0F160}
 		{EF4CE183-387D-44C1-A61A-0466599FC4DF} = {60877AB9-9FC3-4BBF-BC45-AC15F9E99540}
+		{E431EF8E-2A2E-4FA7-9331-A4C96D2EFD31} = {9BE7F3D4-CE51-419A-85C5-F4F062B0F160}
+		{3CE97673-FD14-4814-8FF9-B553A1564173} = {E431EF8E-2A2E-4FA7-9331-A4C96D2EFD31}
+		{C5A81971-58DF-4151-8944-13996E239200} = {3CE97673-FD14-4814-8FF9-B553A1564173}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BFF0EF0E-5955-4A13-AA7C-BF40818E1B92}

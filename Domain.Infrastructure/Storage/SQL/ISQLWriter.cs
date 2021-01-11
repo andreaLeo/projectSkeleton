@@ -7,7 +7,7 @@ namespace Domain.Infrastructure.Storage.SQL
 {
     public interface ISQLWriter
     {
-        T Insert<T>(T toInsert, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
+        T Insert<T>(T toInsert, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, Action<object> resultCallback = null)
           where T : class;
 
         IEnumerable<T> Insert<T>(IEnumerable<T> toInsert, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
