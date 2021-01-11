@@ -1,6 +1,7 @@
 ﻿using CommonServiceLocator;
 using Domain.Infrastructure.DependencyInjection;
 using Ninject;
+using Ninject.Extensions.ChildKernel;
 using Ninject.Parameters;
 using Skeleton.Ninject.ConstructorArgs;
 using System;
@@ -62,5 +63,15 @@ namespace Skeleton.Ninject
         public TService GetInstance<TService>(string key) => Resolve<TService>(key);
         /// <inheritdoc />
         public IEnumerable<TService> GetAllInstances<TService>() => ResolveAll<TService>();
+
+        public void Dispose()
+        {
+            if (!_kernel.IsDisposed)
+            {
+                _kernel.Dispose();
+            }
+        }
+
+        public IDependencyResolver CreateScope() => new NInjectResolver(new ChildKernel(_kernel));
     }
 }

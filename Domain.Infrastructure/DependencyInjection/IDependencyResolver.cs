@@ -4,7 +4,7 @@ using CommonServiceLocator;
 
 namespace Domain.Infrastructure.DependencyInjection
 {
-    public interface IDependencyResolver : IServiceLocator
+    public interface IDependencyResolver : IServiceLocator, IDisposable
     {
         /// <summary />
         object Resolve(Type type, string name);
@@ -29,5 +29,7 @@ namespace Domain.Infrastructure.DependencyInjection
         bool IsRegistered(Type type);
         /// <summary />
         bool IsRegistered(Type type, string name);
+
+        IDependencyResolver CreateScope();
     }
 }
