@@ -1,7 +1,0 @@
-﻿<prism1:PrismApplicationBase 
-    xmlns:prism1="clr-namespace:Prism;assembly=Prism.Uno"
-    x:Class="Skeleton.Xamarin.Prism.App"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    >
-
-</prism1:PrismApplicationBase>
