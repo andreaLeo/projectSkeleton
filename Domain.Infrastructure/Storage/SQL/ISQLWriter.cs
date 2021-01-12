@@ -30,17 +30,17 @@ namespace Domain.Infrastructure.Storage.SQL
 
         int Execute(string query, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, int? commandTimeoutSecond = null, CommandType? commandType = null);
 
-        IEnumerable<T> BulkInsert<T>(IEnumerable<T> toInsert,
-           IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, int? commandTimeoutSecond = null, bool log = false)
-           where T : class;
+        //IEnumerable<T> BulkInsert<T>(IEnumerable<T> toInsert,
+        //   IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, int? commandTimeoutSecond = null, bool log = false)
+        //   where T : class;
 
-        void BulkUpdate<T>(IEnumerable<T> toUpdate,
-         IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, int? commandTimeoutSecond = null, bool log = false)
-         where T : class;
+        //void BulkUpdate<T>(IEnumerable<T> toUpdate,
+        // IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, int? commandTimeoutSecond = null, bool log = false)
+        // where T : class;
 
-        void BulkDelete<T>(IEnumerable<T> toDelete,
-           IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, int? commandTimeoutSecond = null, bool log = false)
-           where T : class;
+        //void BulkDelete<T>(IEnumerable<T> toDelete,
+        //   IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, int? commandTimeoutSecond = null, bool log = false)
+        //   where T : class;
 
 
         int ExecuteStoredProcedure(string storedProcedureName, object param = null,

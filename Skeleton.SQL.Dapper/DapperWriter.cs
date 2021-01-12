@@ -28,8 +28,7 @@ namespace Skeleton.SQL.Dapper
 
         }
 
-        public T Insert<T>(T toInsert, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted,
-            string username = null, Action<object> resultCallback = null)
+        public T Insert<T>(T toInsert, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, Action<object> resultCallback = null)
             where T : class
         {
             var result = ExecuteInTransaction(isolationLevel, (connection, transaction) =>
@@ -43,7 +42,7 @@ namespace Skeleton.SQL.Dapper
         }
 
         public IEnumerable<T> Insert<T>(IEnumerable<T> toInsert,
-            IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, string username = null)
+            IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
             where T : class
         {
             return ExecuteInTransaction(isolationLevel, (connection, transaction) =>
@@ -88,8 +87,7 @@ namespace Skeleton.SQL.Dapper
         }
 
 
-        public bool Delete<T>(T toDelete, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted,
-            string username = null)
+        public bool Delete<T>(T toDelete, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
             where T : class
         {
             bool ret = ExecuteInTransaction(isolationLevel, (connection, transaction) =>
@@ -100,8 +98,7 @@ namespace Skeleton.SQL.Dapper
             return ret;
         }
 
-        public bool Delete<T>(IEnumerable<T> toDelete, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted,
-            string username = null)
+        public bool Delete<T>(IEnumerable<T> toDelete, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
             where T : class
         {
             bool ret = ExecuteInTransaction(isolationLevel, (connection, transaction) =>
@@ -117,7 +114,7 @@ namespace Skeleton.SQL.Dapper
             return ret;
         }
 
-        public int DeleteByParameters<T>(QueryParameter param, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, string username = null, int? commandTimeoutSecond = null)
+        public int DeleteByParameters<T>(QueryParameter param, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted, int? commandTimeoutSecond = null)
             where T : class
         {
             string query = Builder.BuildDeleteQuery(typeof(T), param);
@@ -129,8 +126,7 @@ namespace Skeleton.SQL.Dapper
             return ret;
         }
 
-        public bool Update<T>(T toUpdate, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted,
-            string username = null)
+        public bool Update<T>(T toUpdate, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
             where T : class
         {
             bool succeeded = ExecuteInTransaction(isolationLevel, (connection, transaction) =>
@@ -141,8 +137,7 @@ namespace Skeleton.SQL.Dapper
             return succeeded;
         }
 
-        public bool Update<T>(IEnumerable<T> toUpdate, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted,
-            string username = null)
+        public bool Update<T>(IEnumerable<T> toUpdate, IsolationLevel isolationLevel = IsolationLevel.ReadCommitted)
             where T : class
         {
             bool succeeded = ExecuteInTransaction(isolationLevel, (connection, transaction) =>

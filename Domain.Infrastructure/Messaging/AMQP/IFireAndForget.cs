@@ -1,7 +1,7 @@
 ﻿
 namespace Domain.Infrastructure.Messaging.AMQP
 {
-    public interface IFireAndForget: IMessageConnector
+    public interface IFireAndForget : IMessageConnector
     {
         /// <summary />
         void SendMessage(IMessage message, MessageMetadata metadata);
